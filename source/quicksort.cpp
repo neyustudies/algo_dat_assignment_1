@@ -1,6 +1,4 @@
 #include "quicksort.hpp"
-#include <algorithm>
-#include <iostream>
 
 
 int Quicksort::split(std::vector<int>& v, int first, int last) const {
@@ -24,24 +22,4 @@ void Quicksort::quicksort(std::vector<int>& v, int first, int last) const{
   quicksort(v, pivot + 1, last);
 }
 
-void Quicksort::sorting_array(std::vector<int>& v) const {
-  int size = v.size();
-  quicksort(v, 0, size - 1);
-}
 
-void Quicksort::printing_array(std::vector<int>& v) const {
-  for(int input : v) {
-    std::cout << input << " ";
-  } std::cout << "\n";
-}
-
-int main() {
-  Quicksort Quick;
-  std::vector<int> input = {2, 4 ,-6, 9, 123, 3, 7, 10, -4};
-  int size = input.size();
-  std::vector<int> tmp(size,0);
-  Quick.sorting_array(input);
-  Quick.printing_array(input);
-
-  return 0;
-}
