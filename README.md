@@ -1,4 +1,4 @@
-# programmiersprachen-aufgabenblatt-2
+# Algorithmen und Datenstrukturen - Assignment 1
 
 ## Deadline
 Donnerstag, 29.05.2020 um 23:55 Uhr
