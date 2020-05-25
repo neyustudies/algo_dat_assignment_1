@@ -10,18 +10,16 @@ void Quicksort::quicksort(std::vector<int>& A, int p, int r) const {
   }
 }
 
-int Quicksort::partition(std::vector<int>& A, int p, int r) const {
-  auto x = A[r];
-  int i = p - 1;
-  for(int j = p; j < r; ++j) {
-    if(A[j] <= x) {
+unsigned int Quicksort::partition(std::vector<int>& A, int p, int r) const {
+  int x = A[r];
+  int i = p;
+  for(int j = p; j < r; j++) {
+    if(A[j] <= x) {     
       std::swap(A[i], A[j]);
-      ++i;
-    } std::swap(A[i], A[r]);
+      ++i;   
+    }
+   } std::swap(A[i], A[r]);
       return i;
-  }
-
-  return 0;
 } 
 
 
