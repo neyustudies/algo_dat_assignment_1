@@ -1,7 +1,6 @@
 #ifndef QUICKSORT_HPP
 #define QUICKSORT_HPP
 #include <vector>
-#include <algorithm>
 
 
 class Quicksort {

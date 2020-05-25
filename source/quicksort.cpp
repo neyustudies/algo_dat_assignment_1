@@ -1,7 +1,8 @@
 #include "quicksort.hpp"
-#include <iostream>
+#include <algorithm>
 
-void Quicksort::quicksort(std::vector<int>& A, int p, int r) const{
+
+void Quicksort::quicksort(std::vector<int>& A, int p, int r) const {
   if(p < r) {
       int q = partition(A, p, r);
       quicksort(A, p, q - 1);
@@ -19,6 +20,8 @@ int Quicksort::partition(std::vector<int>& A, int p, int r) const {
     } std::swap(A[i], A[r]);
       return i;
   }
-}
+
+  return 0;
+} 
 
 
