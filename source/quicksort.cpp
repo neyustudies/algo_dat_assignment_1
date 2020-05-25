@@ -4,9 +4,9 @@
 
 void Quicksort::quicksort(std::vector<int>& A, int p, int r) const {
   if(p < r) {
-      int q = partition(A, p, r);
-      quicksort(A, p, q - 1);
-      quicksort(A, q + 1, r);
+    int q = partition(A, p, r);
+    quicksort(A, p, q - 1);
+    quicksort(A, q + 1, r);
   }
 }
 
