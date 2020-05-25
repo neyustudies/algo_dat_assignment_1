@@ -8,8 +8,8 @@ STREQUAL "GNU") OR (("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Intel") AND UNIX))
   set(CMAKE_CXX_FLAGS "-std=c++11")
 endif()
 
-#set(CATCH_DIRECTORY catch-1.4.0)
-#include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/${CATCH_DIRECTORY})
+set(CATCH_DIRECTORY catch-1.4.0)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/${CATCH_DIRECTORY})
 
 if(MSVC)
   add_definitions(-D_CRT_SECURE_NO_WARNINGS)
