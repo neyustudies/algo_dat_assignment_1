@@ -1,7 +1,7 @@
 # Algorithmen und Datenstrukturen - Assignment 1
 
 ## Deadline
-Donnerstag, 29.05.2020 um 23:55 Uhr
+Freitag, 29.05.2020 um 23:55 Uhr
 
 ## Task
 • Implement the Quicksort algorithm. (40%)  
