@@ -1,25 +1,37 @@
 #include "quicksort.hpp"
+#include <iostream>
 
 
-int Quicksort::split(std::vector<int>& v, int first, int last) const {
-  int pivot = (first + last) / 2;
-  std::swap(v[pivot], v[last]);
-  int i = first;
-  for(int j = first; j < last; ++j) {
-    if(v[j] < v[last]) {
-      std::swap(v[i], v[j]);
+void Quicksort::quicksort(std::vector<int>& A, int p, int r) const{
+  if(p >= r)
+    return;
+  int q = partition(A, p, r);
+  quicksort(A, p, q - 1);
+  quicksort(A, q + 1, r);
+}
+
+int Quicksort::partition(std::vector<int>& A, int p, int r) const {
+  int x = (p + r) / 2;
+  std::swap(A[x], A[r]);
+  int i = p;
+  for(int j = p; j < r; ++j) {
+    if(A[j] < A[r]) {
+      std::swap(A[i], A[j]);
       ++i;
     }
-  } std::swap(v[i], v[last]);
+  } std::swap(A[i], A[r]);
     return i;
 }
 
-void Quicksort::quicksort(std::vector<int>& v, int first, int last) const{
-  if(first >= last)
-    return;
-  int pivot = split(v, first, last);
-  quicksort(v, first, pivot - 1);
-  quicksort(v, pivot + 1, last);
+void Quicksort::sort(std::vector<int>& A) const {
+  int s = A.size();
+  quicksort(A, 0, s - 1);
+}
+
+void Quicksort::print(std::vector<int>& A) const {
+  for(int i : A) {
+    std::cout << i << " ";
+  } std::cout << "\n";
 }
 
 

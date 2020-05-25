@@ -7,10 +7,10 @@ class Quicksort {
   
   public:
 
-    int   split           (std::vector<int>& v, int first, int last) const;
-    void  quicksort       (std::vector<int>& v, int first, int last) const;
-    void  sorting_array   (std::vector<int>& v) const;
-    void  printing_array  (std::vector<int>& v) const;
+    int   partition   (std::vector<int>& A, int p, int r) const;
+    void  quicksort   (std::vector<int>& A, int p, int r) const;
+    void  sort        (std::vector<int>& A) const;
+    void  print       (std::vector<int>& A) const;
 
 };
 
