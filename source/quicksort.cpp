@@ -13,13 +13,13 @@ void Quicksort::quicksort(std::vector<int>& A, int p, int r) const {
 unsigned int Quicksort::partition(std::vector<int>& A, int p, int r) const {
   int x = A[r];
   int i = p;
-  for(int j = p; j < r; j++) {
-    if(A[j] <= x) {     
+  for(int j = p; j < r; ++j) {
+    if(A[j] < x) {     
       std::swap(A[i], A[j]);
       ++i;   
     }
-   } std::swap(A[i], A[r]);
-      return i;
+  } std::swap(A[i], A[r]);
+    return i;
 } 
 
 
