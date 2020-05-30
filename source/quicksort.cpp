@@ -1,5 +1,5 @@
 #include "quicksort.hpp"
-#include <algorithm>
+#include <iostream>
 
 
 void Quicksort::quicksort(std::vector<int>& A, int p, int r) const {
@@ -9,6 +9,7 @@ void Quicksort::quicksort(std::vector<int>& A, int p, int r) const {
     quicksort(A, q + 1, r);
   }
 }
+
 
 unsigned int Quicksort::partition(std::vector<int>& A, int p, int r) const {
   int x = A[r];
@@ -21,5 +22,3 @@ unsigned int Quicksort::partition(std::vector<int>& A, int p, int r) const {
   } std::swap(A[i], A[r]);
     return i;
 } 
-
-
