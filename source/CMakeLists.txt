@@ -1,4 +1,5 @@
-# Build tests
-add_executable(tests
-  tests.cpp
-  quicksort.cpp)
+add_executable(main
+  main.cpp
+  quicksort.cpp
+  countingsort.cpp
+)
